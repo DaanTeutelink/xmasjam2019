@@ -16,28 +16,17 @@ public class ShopScript : MonoBehaviour
     void Start()
     {
         isWindowOpen = false;
-
     }
 
     // Update is called once per frame
     void Update()
     {
         updateMoney();
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (money < 9999)
-            money = money + 5;
-
-            if (money > 9999)
-                money = 9999;
-        }
-
     }
 
     void updateMoney()
     {
-        moneyText.text = "Money: " + money.ToString("0000");
+        moneyText.text = "Money: " + money.ToString("00000");
     }
 
     public void ShopButton()
@@ -52,8 +41,5 @@ public class ShopScript : MonoBehaviour
         {
             shopButtonText.text = "Shop";
         }
-
-
     }
-
 }
